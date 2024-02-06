@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color:antiquewhite;
+                background-image:linear-gradient(to bottom right,rgb(235, 212, 179),rgb(157, 199, 213));
+                min-height:100vh;
+            }
+        @font-face {
+            font-family: 'Style';
+            src: url('./fonts/CreativeThinking\ Bold.ttf');
+        }
+
+        @font-face {
+            font-family: 'Style-italic';
+            src: url('./fonts/CreativeThinking\ BoldItalic.ttf');
+        }
+        @font-face { 
+            font-family: 'Goofy-text';
+            src: url('./fonts/TT\ Trailers\ Trial\ Medium.ttf');
+        }
+        @font-face{
+            font-family: 'blog-font';
+            src: url('./fonts/TestSöhne-Kräftig.otf');
+        }
+        @font-face{
+            font-family: 'blog-font-italic';
+            src: url('./fonts/TestSöhne-KräftigItalic.otf');
+        }
+        .heading{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 200%;
+            /* margin-top:50%; */
+            
+        }
+        .rest{
+            /* display:flex;
+            align-items: center;
+            justify-content: center; */
+            font-family: blog-font;
+            font-size: 120%;
+            margin-top:3%;
+            margin-left:18%;
+            margin-right:17%;
+        }
+        p{
+            margin-top:6%;
+            margin-bottom:6%;
+        }
+        .like-comment-container {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+            }
+
+            .like-button,
+            .comment-button {
+                /* font-family: 'blog-font'; */
+                padding: 10px;
+                cursor: pointer;
+                border: none;
+                background-color: #343333;
+                color: white;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+                margin-left:18%;
+                margin-right:19%;
+                border-radius:15px;
+                margin-bottom:70px;
+
+            }
+
+            .comment-container {
+                margin-top: 20px;
+                margin-left:18%;
+                margin-right:20%;
+                
+            }
+
+            .comment-input {
+                width: 100%;
+                padding: 10px;
+                margin-top: 10px;
+                border: 1px solid #ccc;
+                border-radius: 15px;
+            }
+
+            .comments-list {
+                list-style-type: none;
+                padding: 0;
+            margin-bottom:20px;
+
+            }
+
+            .comment-item {
+                margin-top: 10px;
+            /* margin-bottom:100px; */
+
+            }
+
+            .like-counter {
+            margin-top: 20px;
+            font-family: 'blog-font';
+            font-size: 120%;
+            margin-bottom:70px;
+            } 
+            .submit{
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+                cursor: pointer;
+                border: none;
+                background-color: #343333;
+                color: white;
+                border-radius: 5px;
+                /* margin-left:18%;
+                margin-right:19%; */
+                border-radius:15px;
+                margin-top:10px;
+                margin-bottom:20px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="heading">
+            <h1 style="font-family:Style;font-size: 45px;"><bold>Unleash Your Inner Chad: Mewing for Jawline Gainz and Neck Flex Appeal</bold></h1>
+        
+        </div>
+        <div class="rest" >
+            <p style="font-family:blog-font"><p>Alright, buckle up, fellow readers, because we're diving headfirst into the world of mewing – the ultimate chad move for leveling up your facial aesthetics and unlocking jawline gainz that'll have you flexing harder than a bodybuilder on leg day.</p>
+
+            <p><strong>What's the Deal with Mewing?</strong></p>
+            
+            <p>So, you're probably wondering, "What the heck is mewing anyway?" Well, imagine if yoga and weightlifting had a lovechild specifically designed to sculpt your face – that's mewing. It's all about slapping your tongue against the roof of your mouth, breathing like a serene Buddhist monk, and channeling your inner zen warrior to unlock jawline gainz that'll make even Zoolander jealous.</p>
+            
+            <p><strong>Mewmaxxing: Leveling Up Your Facial Game</strong></p>
+            
+            <p>Forget about swiping right on Tinder – with mewing, you're swiping right on life itself. We're talking about transcending into a higher plane of existence where your cheekbones could cut diamonds and your jawline could rival Thor's hammer. Say goodbye to weak chins and hello to chiseled perfection. Mewmaxxing isn't just a lifestyle; it's a state of mind.</p>
+            
+            <p><strong>Jawmaxxing: Sculpting Your Facial Fortress</strong></p>
+            
+            <p>You know those dudes who look like they could crack walnuts with their jawlines? Yeah, that could be you, my friend. With consistent mewing, you're not just sculpting your jawline; you're forging a facial fortress that'll have the gods themselves trembling in envy. Say hello to jawline gainz so sharp, they're practically a health hazard.</p>
+            
+            <p><strong>Neckmaxxing: Flexing Your Flex Appeal</strong></p>
+            
+            <p>Think mewing is all about the face? Think again. It's time to show some love to your neck muscles and unlock that neck flex appeal. Picture this: You're strolling down the street, and heads turn not just for your jawline but for that neck that screams, "I lift, bro." Neckmaxxing isn't just about looking good; it's about flexing on the world one neck rotation at a time.</p>
+            
+            <p><strong>Looksmaxxing: Becoming the Ultimate Chad</strong></p>
+            
+            <p>At the end of the day, mewing isn't just about jawline gainz or neck flex appeal – it's about becoming the ultimate chad version of yourself. It's about stepping into your power, embracing your inner alpha, and flexing on the haters like there's no tomorrow. So, grab your tongue, find your zen, and let's mew our way to greatness, one jawline at a time.</p>
+            
+            <p>In conclusion, mewing isn't just a fad; it's a revolution. It's about taking control of your facial destiny and unlocking the jawline gainz and neck flex appeal you never knew you had. So, what are you waiting for? Join the mewing movement today and unleash your inner chad like never before.</p>
+        </div>
+        <div class="like-comment-container">
+            <button class="like-button" onclick="toggleLike()">Like</button>
+            <span class="like-counter" id="likeCounter">0 Likes</span>
+            <button class="comment-button" onclick="toggleComment()">Add Comment</button>
+        </div>
+
+        <div class="comment-container" style="display: none;">
+            <textarea class="comment-input" placeholder="Write your comment..."></textarea>
+            <button class="submit" onclick="addComment()">Submit Comment</button>
+            <ul class="comments-list" id="commentsList"></ul>
+        </div>
+        <script>
+            let likeCount = 0;
+    
+            function toggleLike() {
+                likeCount++;
+                updateLikeCounter();
+                // alert('Liked!');
+                saveLikesToLocalStorage();
+                // Add logic for handling like
+            }
+    
+            function updateLikeCounter() {
+                const likeCounter = document.getElementById('likeCounter');
+                likeCounter.textContent = likeCount + (likeCount === 1 ? ' Like' : ' Likes');
+            }
+    
+            function saveLikesToLocalStorage() {
+                localStorage.setItem('likes', likeCount.toString());
+            }
+    
+            function loadLikesFromLocalStorage() {
+                const storedLikes = localStorage.getItem('likes');
+    
+                if (storedLikes) {
+                    likeCount = parseInt(storedLikes, 10);
+                    updateLikeCounter();
+                }
+            }
+    
+            function toggleComment() {
+                const commentContainer = document.querySelector('.comment-container');
+                commentContainer.style.display = commentContainer.style.display === 'none' ? 'block' : 'none';
+            }
+    
+            function addComment() {
+                const commentInput = document.querySelector('.comment-input');
+                const commentsList = document.getElementById('commentsList');
+                const commentText = commentInput.value;
+    
+                if (commentText.trim() !== '') {
+                    const commentItem = document.createElement('li');
+                    commentItem.classList.add('comment-item');
+                    commentItem.textContent = commentText;
+    
+                    commentsList.appendChild(commentItem);
+                    commentInput.value = '';
+    
+                    // Save comments to local storage
+                    saveCommentsToLocalStorage();
+                }
+            }
+    
+            function saveCommentsToLocalStorage() {
+                const commentsList = document.getElementById('commentsList');
+                const comments = [];
+    
+                commentsList.childNodes.forEach(commentItem => {
+                    comments.push(commentItem.textContent);
+                });
+    
+                localStorage.setItem('comments', JSON.stringify(comments));
+            }
+    
+            function loadCommentsFromLocalStorage() {
+                const commentsList = document.getElementById('commentsList');
+                const storedComments = localStorage.getItem('comments');
+    
+                if (storedComments) {
+                    const parsedComments = JSON.parse(storedComments);
+    
+                    parsedComments.forEach(commentText => {
+                        const commentItem = document.createElement('li');
+                        commentItem.classList.add('comment-item');
+                        commentItem.textContent = commentText;
+    
+                        commentsList.appendChild(commentItem);
+                    });
+                }
+            }
+    
+            // Call the functions to load likes and comments on page load
+            loadLikesFromLocalStorage();
+            loadCommentsFromLocalStorage();
+        </script>
+    </body>
+</html>

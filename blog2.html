@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color:antiquewhite;
+                background-image:linear-gradient(to bottom right,rgb(143, 225, 213),rgb(246, 188, 223));
+                min-height:100vh;
+            }
+        @font-face {
+            font-family: 'Style';
+            src: url('./fonts/CreativeThinking\ Bold.ttf');
+        }
+
+        @font-face {
+            font-family: 'Style-italic';
+            src: url('./fonts/CreativeThinking\ BoldItalic.ttf');
+        }
+        @font-face { 
+            font-family: 'Goofy-text';
+            src: url('./fonts/TT\ Trailers\ Trial\ Medium.ttf');
+        }
+        @font-face{
+            font-family: 'blog-font';
+            src: url('./fonts/TestSöhne-Kräftig.otf');
+        }
+        @font-face{
+            font-family: 'blog-font-italic';
+            src: url('./fonts/TestSöhne-KräftigItalic.otf');
+        }
+        .heading{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 200%;
+            /* margin-top:50%; */
+            
+        }
+        .rest{
+            /* display:flex;
+            align-items: center;
+            justify-content: center; */
+            font-family: blog-font;
+            font-size: 120%;
+            margin-top:3%;
+            margin-left:18%;
+            margin-right:17%;
+        }
+        p{
+            margin-top:6%;
+            margin-bottom:6%;
+        }
+        .like-comment-container {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+            }
+
+            .like-button,
+            .comment-button {
+                /* font-family: 'blog-font'; */
+                padding: 10px;
+                cursor: pointer;
+                border: none;
+                background-color: #343333;
+                color: white;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+                margin-left:18%;
+                margin-right:19%;
+                border-radius:15px;
+                margin-bottom:70px;
+
+            }
+
+            .comment-container {
+                margin-top: 20px;
+                margin-left:18%;
+                margin-right:20%;
+                
+            }
+
+            .comment-input {
+                width: 100%;
+                padding: 10px;
+                margin-top: 10px;
+                border: 1px solid #ccc;
+                border-radius: 15px;
+            }
+
+            .comments-list {
+                list-style-type: none;
+                padding: 0;
+            margin-bottom:20px;
+
+            }
+
+            .comment-item {
+                margin-top: 10px;
+            /* margin-bottom:100px; */
+
+            }
+
+            .like-counter {
+            margin-top: 20px;
+            font-family: 'blog-font';
+            font-size: 120%;
+            margin-bottom:70px;
+            } 
+            .submit{
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+                cursor: pointer;
+                border: none;
+                background-color: #343333;
+                color: white;
+                border-radius: 5px;
+                /* margin-left:18%;
+                margin-right:19%; */
+                border-radius:15px;
+                margin-top:10px;
+                margin-bottom:20px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="heading">
+            <h1 style="font-family:Style"><bold>Why Shrek is the Hottest Character of All Time</bold></h1>
+        
+        </div>
+        <div class="rest" >
+            <p style="font-family:blog-font"><p>Alright, listen up, fellow Redditors, because we're about to dive into a topic that's hotter than dragon's fire and cooler than the flip side of the pillow: why Shrek is the hottest character of all time. Now, I know what you're thinking – "But isn't Shrek just an ogre?" Wrong! Shrek isn't just any old ogre; he's the ogre of our dreams, and here's why:</p>
+
+            <p><strong>He's Got Attitude</strong></p>
+            
+            <p>Let's start with the obvious – Shrek's got attitude for days. From his sassy comebacks to his iconic eyebrow raises, this ogre's got more swagger than a cat in boots. Whether he's saving the day or throwing shade at Lord Farquaad, Shrek knows how to work it, and that confidence is seriously hot.</p>
+            
+            <p><strong>Rockin' that Green Complexion</strong></p>
+            
+            <p>Sure, green might not be everyone's first choice when it comes to skin tones, but Shrek rocks it like nobody's business. That olive-green hue? It's the epitome of unconventional beauty, and Shrek wears it with pride. Who needs a golden tan when you've got a complexion as unique as his?</p>
+            
+            <p><strong>A Heart of Gold</strong></p>
+            
+            <p>But it's not just about looks with Shrek – it's what's on the inside that counts. And let me tell you, this ogre's heart is pure gold. Despite his rough exterior, Shrek's got a soft spot for those he cares about, whether it's his loyal sidekick Donkey or his true love Fiona. Talk about swoon-worthy.</p>
+            
+            <p><strong>He's A Real Ogre</strong></p>
+            
+            <p>In a world full of princes and princesses, Shrek stands out as the ultimate real ogre. He's not afraid to get down and dirty, and he's definitely not afraid to be himself. No fake personas or royal titles here – just a plain old ogre doing his thing, and that authenticity is undeniably attractive.</p>
+            
+            <p>So there you have it, folks – the undeniable reasons why Shrek is the hottest character of all time. From his killer attitude to his unique green complexion, there's just something about this ogre that sets hearts on fire. So next time you're watching Shrek strut his stuff on the big screen, remember – you're not just looking at any old ogre; you're looking at the hottest character of all time.</p>
+            </div>
+        <div class="like-comment-container">
+            <button class="like-button" onclick="toggleLike()">Like</button>
+            <span class="like-counter">0 Likes</span>
+            <button class="comment-button" onclick="toggleComment()">Add Comment</button>
+        </div>
+
+        <div class="comment-container" style="display: none;">
+            <textarea class="comment-input" placeholder="Write your comment..."></textarea>
+            <button class="submit" onclick="addComment()">Submit Comment</button>
+            <ul class="comments-list" id="commentsList"></ul>
+        </div>
+        <script>
+            let likeCount = 0;
+    
+            function toggleLike() {
+                likeCount++;
+                updateLikeCounter();
+            }
+    
+            function updateLikeCounter() {
+                const likeCounter = document.querySelector('.like-counter');
+                likeCounter.textContent = likeCount + (likeCount === 1 ? ' Like' : ' Likes');
+            }
+    
+            function toggleComment() {
+                const commentContainer = document.querySelector('.comment-container');
+                commentContainer.style.display = commentContainer.style.display === 'none' ? 'block' : 'none';
+            }
+    
+            function addComment() {
+                const commentInput = document.querySelector('.comment-input');
+                const commentsList = document.getElementById('commentsList');
+                const commentText = commentInput.value;
+    
+                if (commentText.trim() !== '') {
+                    const commentItem = document.createElement('li');
+                    commentItem.classList.add('comment-item');
+                    commentItem.textContent = commentText;
+    
+                    commentsList.appendChild(commentItem);
+                    commentInput.value = '';
+    
+                    // Save comments to local storage
+                    saveCommentsToLocalStorage();
+                }
+            }
+    
+            function saveCommentsToLocalStorage() {
+                const commentsList = document.getElementById('commentsList');
+                const comments = [];
+    
+                commentsList.childNodes.forEach(commentItem => {
+                    comments.push(commentItem.textContent);
+                });
+    
+                localStorage.setItem('comments', JSON.stringify(comments));
+            }
+    
+            // Load comments from local storage on page load
+            function loadCommentsFromLocalStorage() {
+                const commentsList = document.getElementById('commentsList');
+                const storedComments = localStorage.getItem('comments');
+    
+                if (storedComments) {
+                    const parsedComments = JSON.parse(storedComments);
+    
+                    parsedComments.forEach(commentText => {
+                        const commentItem = document.createElement('li');
+                        commentItem.classList.add('comment-item');
+                        commentItem.textContent = commentText;
+    
+                        commentsList.appendChild(commentItem);
+                    });
+                }
+            }
+    
+            // Call the function to load comments on page load
+            loadCommentsFromLocalStorage();
+        </script>
+    </body>
+</html>
